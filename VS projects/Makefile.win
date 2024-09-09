@@ -1,0 +1,136 @@
+# Project: Space Invaders ++
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = "SpaceInvaders\ ++.o" GameEngine.o SoundEngine.o ScreenManager.o BitmapStore.o ScreenManagerRemoteControl.o Button.o UIPanel.o InputHandler.o Screen.o SelectScreen.o SelectInputHandler.o SelectUIPanel.o GameScreen.o GameInputHandler.o GameUIPanel.o GameOverInputHandler.o GameOverUIPanel.o ColliderComponent.o RectColliderComponent.o GraphicsComponent.o StandardGraphicsComponent.o TransformComponent.o UpdateComponent.o BulletUpdate.o InvaderUpdate.o PlayerUpdate.o GameObject.o GameObjectBlueprint.o ObjectTags.o BlueprintObjectParser.o PlayModeObjectLoader.o GameObjectFactoryPlayMode.o GameObjectSharer.o LevelManagement.o BulletSpawner.o PhysicsEnginePlayMode.o
+LINKOBJ  = "SpaceInvaders ++.o" GameEngine.o SoundEngine.o ScreenManager.o BitmapStore.o ScreenManagerRemoteControl.o Button.o UIPanel.o InputHandler.o Screen.o SelectScreen.o SelectInputHandler.o SelectUIPanel.o GameScreen.o GameInputHandler.o GameUIPanel.o GameOverInputHandler.o GameOverUIPanel.o ColliderComponent.o RectColliderComponent.o GraphicsComponent.o StandardGraphicsComponent.o TransformComponent.o UpdateComponent.o BulletUpdate.o InvaderUpdate.o PlayerUpdate.o GameObject.o GameObjectBlueprint.o ObjectTags.o BlueprintObjectParser.o PlayModeObjectLoader.o GameObjectFactoryPlayMode.o GameObjectSharer.o LevelManagement.o BulletSpawner.o PhysicsEnginePlayMode.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -L"C:/Users/Enesi Ogirimah Dan/Desktop/codes/SFML-2.4.2/lib" -mwindows -lsfml-audio -lsfml-graphics -lsfml-window -lsfml-system
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Users/Enesi Ogirimah Dan/Desktop/codes/SFML-2.4.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++" -I"C:/Users/Enesi Ogirimah Dan/Desktop/codes/SFML-2.4.2/include"
+BIN      = "Space Invaders ++.exe"
+CXXFLAGS = $(CXXINCS) -std=c++11
+CFLAGS   = $(INCS) -std=c++11
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+"SpaceInvaders\ ++.o": SpaceInvaders\ ++.cpp
+	$(CPP) -c "SpaceInvaders ++.cpp" -o "SpaceInvaders ++.o" $(CXXFLAGS)
+
+GameEngine.o: GameEngine.cpp
+	$(CPP) -c GameEngine.cpp -o GameEngine.o $(CXXFLAGS)
+
+SoundEngine.o: SoundEngine.cpp
+	$(CPP) -c SoundEngine.cpp -o SoundEngine.o $(CXXFLAGS)
+
+ScreenManager.o: ScreenManager.cpp
+	$(CPP) -c ScreenManager.cpp -o ScreenManager.o $(CXXFLAGS)
+
+BitmapStore.o: BitmapStore.cpp
+	$(CPP) -c BitmapStore.cpp -o BitmapStore.o $(CXXFLAGS)
+
+ScreenManagerRemoteControl.o: ScreenManagerRemoteControl.cpp
+	$(CPP) -c ScreenManagerRemoteControl.cpp -o ScreenManagerRemoteControl.o $(CXXFLAGS)
+
+Button.o: Button.cpp
+	$(CPP) -c Button.cpp -o Button.o $(CXXFLAGS)
+
+UIPanel.o: UIPanel.cpp
+	$(CPP) -c UIPanel.cpp -o UIPanel.o $(CXXFLAGS)
+
+InputHandler.o: InputHandler.cpp
+	$(CPP) -c InputHandler.cpp -o InputHandler.o $(CXXFLAGS)
+
+Screen.o: Screen.cpp
+	$(CPP) -c Screen.cpp -o Screen.o $(CXXFLAGS)
+
+SelectScreen.o: SelectScreen.cpp
+	$(CPP) -c SelectScreen.cpp -o SelectScreen.o $(CXXFLAGS)
+
+SelectInputHandler.o: SelectInputHandler.cpp
+	$(CPP) -c SelectInputHandler.cpp -o SelectInputHandler.o $(CXXFLAGS)
+
+SelectUIPanel.o: SelectUIPanel.cpp
+	$(CPP) -c SelectUIPanel.cpp -o SelectUIPanel.o $(CXXFLAGS)
+
+GameScreen.o: GameScreen.cpp
+	$(CPP) -c GameScreen.cpp -o GameScreen.o $(CXXFLAGS)
+
+GameInputHandler.o: GameInputHandler.cpp
+	$(CPP) -c GameInputHandler.cpp -o GameInputHandler.o $(CXXFLAGS)
+
+GameUIPanel.o: GameUIPanel.cpp
+	$(CPP) -c GameUIPanel.cpp -o GameUIPanel.o $(CXXFLAGS)
+
+GameOverInputHandler.o: GameOverInputHandler.cpp
+	$(CPP) -c GameOverInputHandler.cpp -o GameOverInputHandler.o $(CXXFLAGS)
+
+GameOverUIPanel.o: GameOverUIPanel.cpp
+	$(CPP) -c GameOverUIPanel.cpp -o GameOverUIPanel.o $(CXXFLAGS)
+
+ColliderComponent.o: ColliderComponent.cpp
+	$(CPP) -c ColliderComponent.cpp -o ColliderComponent.o $(CXXFLAGS)
+
+RectColliderComponent.o: RectColliderComponent.cpp
+	$(CPP) -c RectColliderComponent.cpp -o RectColliderComponent.o $(CXXFLAGS)
+
+GraphicsComponent.o: GraphicsComponent.cpp
+	$(CPP) -c GraphicsComponent.cpp -o GraphicsComponent.o $(CXXFLAGS)
+
+StandardGraphicsComponent.o: StandardGraphicsComponent.cpp
+	$(CPP) -c StandardGraphicsComponent.cpp -o StandardGraphicsComponent.o $(CXXFLAGS)
+
+TransformComponent.o: TransformComponent.cpp
+	$(CPP) -c TransformComponent.cpp -o TransformComponent.o $(CXXFLAGS)
+
+UpdateComponent.o: UpdateComponent.cpp
+	$(CPP) -c UpdateComponent.cpp -o UpdateComponent.o $(CXXFLAGS)
+
+BulletUpdate.o: BulletUpdate.cpp
+	$(CPP) -c BulletUpdate.cpp -o BulletUpdate.o $(CXXFLAGS)
+
+InvaderUpdate.o: InvaderUpdate.cpp
+	$(CPP) -c InvaderUpdate.cpp -o InvaderUpdate.o $(CXXFLAGS)
+
+PlayerUpdate.o: PlayerUpdate.cpp
+	$(CPP) -c PlayerUpdate.cpp -o PlayerUpdate.o $(CXXFLAGS)
+
+GameObject.o: GameObject.cpp
+	$(CPP) -c GameObject.cpp -o GameObject.o $(CXXFLAGS)
+
+GameObjectBlueprint.o: GameObjectBlueprint.cpp
+	$(CPP) -c GameObjectBlueprint.cpp -o GameObjectBlueprint.o $(CXXFLAGS)
+
+ObjectTags.o: ObjectTags.cpp
+	$(CPP) -c ObjectTags.cpp -o ObjectTags.o $(CXXFLAGS)
+
+BlueprintObjectParser.o: BlueprintObjectParser.cpp
+	$(CPP) -c BlueprintObjectParser.cpp -o BlueprintObjectParser.o $(CXXFLAGS)
+
+PlayModeObjectLoader.o: PlayModeObjectLoader.cpp
+	$(CPP) -c PlayModeObjectLoader.cpp -o PlayModeObjectLoader.o $(CXXFLAGS)
+
+GameObjectFactoryPlayMode.o: GameObjectFactoryPlayMode.cpp
+	$(CPP) -c GameObjectFactoryPlayMode.cpp -o GameObjectFactoryPlayMode.o $(CXXFLAGS)
+
+GameObjectSharer.o: GameObjectSharer.cpp
+	$(CPP) -c GameObjectSharer.cpp -o GameObjectSharer.o $(CXXFLAGS)
+
+LevelManagement.o: LevelManagement.cpp
+	$(CPP) -c LevelManagement.cpp -o LevelManagement.o $(CXXFLAGS)
+
+BulletSpawner.o: BulletSpawner.cpp
+	$(CPP) -c BulletSpawner.cpp -o BulletSpawner.o $(CXXFLAGS)
+
+PhysicsEnginePlayMode.o: PhysicsEnginePlayMode.cpp
+	$(CPP) -c PhysicsEnginePlayMode.cpp -o PhysicsEnginePlayMode.o $(CXXFLAGS)
